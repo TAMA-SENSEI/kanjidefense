@@ -24,8 +24,8 @@
             const enemy = document.getElementById("Enemy");
             const player = document.getElementById("Players");
             const bctx = bck.getContext("2d");
-            const words=[a,b,c,d,e,f];
-            const ans=[a,b,c,d,e,f];
+            const words=['a','b','c','d','e','f'];
+            const ans=['a','b','c','d','e','f'];
             const ent=[0];
             const env=[0];
             
@@ -38,12 +38,13 @@
                 }
             }
             function renderen(t,v){
-                switch t:
-                    case t<2000:
+                switch (t){
+                    case (t<2000):
                         var p = [t/10,200];
                         bctx.font = "50px Arial";
                         bctx.fillText(v,10,80);
                         break;
+                }
             }
         </script>
     </body>
