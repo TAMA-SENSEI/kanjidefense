@@ -29,20 +29,24 @@
             const ent=[0];
             const env=[0];
             
-            setInterval(Main(),15);
+            setInterval(Main,15);
             
             function Main(){
+				clear();
                 for(i = 0; i< ent.length; i++){
                     renderen(ent[i],env[i]);
                     ent[i]+=15;
                 }
+
+            }
+            function clear(){
+            	bctx.clearRect(0,0,bck.width, bck.height);
             }
             function renderen(t,v){
-                switch (t){
+                switch (true){
                     case (t<2000):
-                        var p = [t/10,200];
-                        bctx.font = "50px Arial";
-                        bctx.fillText(v,10,80);
+                        var p = [t,200];
+                        bctx.fillText(v,t/10,80);
                         break;
                 }
             }
